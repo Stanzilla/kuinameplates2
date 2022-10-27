@@ -63,6 +63,9 @@ do
     local function FadeSpark(bar)
         local val,max = bar:GetValue(),select(2,bar:GetMinMaxValues())
         local show_val = (max / 100) * 80
+        val = math.min(1, math.max(0, val))
+        max = math.min(1, math.max(0, max))
+        show_val = math.min(1, math.max(0, show_val))
 
         if val == 0 or val == max then
             bar.spark:Hide()
@@ -70,7 +73,7 @@ do
             bar.spark:SetAlpha(1)
             bar.spark:Show()
         else
-            bar.spark:SetAlpha(math.min(1, math.max(1 - ((val - show_val) / (max - show_val)))))
+            bar.spark:SetAlpha(1 - ((val - show_val) / (max - show_val)))
             bar.spark:Show()
         end
     end
