@@ -82,7 +82,7 @@ function layout:HealthUpdate(f)
 end
 -- initialise ##################################################################
 function layout:Initialise()
-    print('|cff9966ffKui Nameplates|r: |cffff6666You are using Kui_Nameplates_Example which is not updated by the Curse package.|r If you experience errors, check the repository on GitHub for updates.')
+    -- print('|cff9966ffKui Nameplates|r: |cffff6666You are using Kui_Nameplates_Example which is not updated by the Curse package.|r If you experience errors, check the repository on GitHub for updates.')
 
     self:RegisterMessage('Create')
     self:RegisterMessage('Show')
