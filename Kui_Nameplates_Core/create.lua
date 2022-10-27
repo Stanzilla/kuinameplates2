@@ -70,7 +70,7 @@ do
             bar.spark:SetAlpha(1)
             bar.spark:Show()
         else
-            bar.spark:SetAlpha(1 - ((val - show_val) / (max - show_val)))
+            bar.spark:SetAlpha(math.min(1, math.max(1 - ((val - show_val) / (max - show_val)))))
             bar.spark:Show()
         end
     end
