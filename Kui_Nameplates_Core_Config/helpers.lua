@@ -1274,7 +1274,7 @@ function opt:Initialise()
 
     -- version string
     local version = self:CreateFontString(nil,'ARTWORK')
-    version:SetFont(STANDARD_TEXT_FONT,10)
+    version:SetFont(STANDARD_TEXT_FONT,10, "")
     version:SetJustifyH('RIGHT')
     version:SetTextColor(.7,.7,.7)
     version:SetPoint('BOTTOMRIGHT',self,'TOPRIGHT',-10,4)

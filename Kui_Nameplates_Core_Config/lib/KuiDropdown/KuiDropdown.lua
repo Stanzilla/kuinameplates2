@@ -114,9 +114,9 @@ local function CreateListButton(parent)
     label:SetPoint("LEFT", 27, 0)
     label:SetPoint("RIGHT")
     --luacheck:globals GameFontHighlightSmallLeft
-    label:SetFont((GameFontHighlightSmallLeft:GetFont()), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT)
+    label:SetFont((GameFontHighlightSmallLeft:GetFont()), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT, "")
     label:SetJustifyH("LEFT")
-    label:SetWordWrap()
+    label:SetWordWrap(true)
     button:SetFontString(label)
     button.label = label
 
@@ -251,7 +251,7 @@ function CreateList(dropdown) -- local
         list:SetScript("OnShow", UpdateList)
 
         list.text = list:CreateFontString()
-        list.text:SetFont((GameFontNormal:GetFont()), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT + 2)
+        list.text:SetFont((GameFontNormal:GetFont()), UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT + 2, "")
 
         list.buttons = setmetatable({}, { __index = function(t, i)
             local button = CreateListButton(list)
