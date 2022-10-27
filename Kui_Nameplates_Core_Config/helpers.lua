@@ -1272,16 +1272,16 @@ function opt:Initialise()
     p_delete:SetScript('OnShow',ProfileButtonOnShow)
     p_delete:SetScript('OnClick',profile_delete_OnClick)
 
-    -- version string
-    local version = self:CreateFontString(nil,'ARTWORK')
-    version:SetFont(STANDARD_TEXT_FONT,10, "")
-    version:SetJustifyH('RIGHT')
-    version:SetTextColor(.7,.7,.7)
-    version:SetPoint('BOTTOMRIGHT',self,'TOPRIGHT',-10,4)
-    version:SetText(format(
-        L.titles.version,
-        'Kui Nameplates','Kesavaa','Twitch','@project-version@'
-    ))
+    -- -- version string
+    -- local version = self:CreateFontString(nil,'ARTWORK')
+    -- version:SetFont(STANDARD_TEXT_FONT,10, "")
+    -- version:SetJustifyH('RIGHT')
+    -- version:SetTextColor(.7,.7,.7)
+    -- version:SetPoint('BOTTOMRIGHT',self,'TOPRIGHT',-10,4)
+    -- version:SetText(format(
+    --     L.titles.version,
+    --     'Kui Nameplates','Kesavaa','Twitch','@project-version@'
+    -- ))
 
     self.TabList = tablist
     self.TabListBG = tl_bg
