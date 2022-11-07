@@ -63,10 +63,13 @@ do
     local function FadeSpark(bar)
         local val,max = bar:GetValue(),select(2,bar:GetMinMaxValues())
         local show_val = (max / 100) * 80
+        val = math.min(1, math.max(0, val))
+        max = math.min(1, math.max(0, max))
+        show_val = math.min(1, math.max(0, show_val))
 
         if val == 0 or val == max then
             bar.spark:Hide()
-        elseif val < show_val then
+        elseif val <= show_val then
             bar.spark:SetAlpha(1)
             bar.spark:Show()
         else
@@ -159,7 +162,7 @@ end
 local function CreateFontString(parent,small)
     local f = parent:CreateFontString(nil,'OVERLAY')
     f.fontobject_small = small
-    f:SetWordWrap()
+    f:SetWordWrap(false)
 
     UpdateFontObject(f)
 
@@ -1277,7 +1280,7 @@ do
     end
     local function CreateSpellName(f)
         local spellname = CreateFontString(f.CastBar,FONT_SIZE_SMALL)
-        spellname:SetWordWrap()
+        spellname:SetWordWrap(false)
         spellname:Hide()
 
         f.handler:RegisterElement('SpellName', spellname)

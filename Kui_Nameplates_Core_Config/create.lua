@@ -387,7 +387,7 @@ function text:Initialise()
     end
     function font_face:OnListButtonChanged(button,item)
         local font = LSM:Fetch(LSM.MediaType.FONT,item.value)
-        button.label:SetFont(font,12)
+        button.label:SetFont(font,12, "")
     end
 end
 -- nameonly ####################################################################

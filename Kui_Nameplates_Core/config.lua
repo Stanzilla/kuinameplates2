@@ -961,10 +961,10 @@ function core:InitialiseConfig()
     --luacheck:globals KuiNameplatesCoreSaved KuiNameplatesCoreConfig
     --@alpha@
     if not KuiNameplatesCoreSaved or not KuiNameplatesCoreSaved.SHUT_UP then
-        addon:ui_print('You are using an alpha release;')
-        print('    Please report issues to www.github.com/kesava-wow/kuinameplates2')
-        print('    And include the output of: /knp dump')
-        print('    Thanks!')
+        -- addon:ui_print('You are using an alpha release;')
+        -- print('    Please report issues to www.github.com/kesava-wow/kuinameplates2')
+        -- print('    And include the output of: /knp dump')
+        -- print('    Thanks!')
     end
     --@end-alpha@
 
@@ -1032,7 +1032,7 @@ function core:InitialiseConfig()
     QueueClickboxUpdate()
 
     -- also update upon closing interface options
-    InterfaceOptionsFrame:HookScript('OnHide',QueueClickboxUpdate)
+    -- InterfaceOptionsFrame:HookScript('OnHide',QueueClickboxUpdate)
 
     -- listen for LSM media updates
     LSM.RegisterCallback(self, 'LibSharedMedia_Registered', 'LSMMediaRegistered')

@@ -36,7 +36,7 @@ end
 local function CreateNameText(f)
     local text = f:CreateFontString(nil,'OVERLAY')
     text:SetFont('fonts/frizqt__.ttf',11,'OUTLINE',0,-1)
-    text:SetWordWrap()
+    text:SetWordWrap(false)
 
     text:SetPoint('BOTTOMLEFT',f.HealthBar,'TOPLEFT')
     text:SetPoint('BOTTOMRIGHT',f.HealthBar,'TOPRIGHT')
@@ -47,7 +47,7 @@ end
 local function CreateHealthText(f)
     local text = f:CreateFontString(nil,'OVERLAY')
     text:SetFont('fonts/frizqt__.ttf',10,'OUTLINE')
-    text:SetWordWrap()
+    text:SetWordWrap(false)
     text:Hide()
 
     text:SetPoint('CENTER',f.HealthBar,'BOTTOM',0,1.5)
@@ -82,7 +82,7 @@ function layout:HealthUpdate(f)
 end
 -- initialise ##################################################################
 function layout:Initialise()
-    print('|cff9966ffKui Nameplates|r: |cffff6666You are using Kui_Nameplates_Example which is not updated by the Curse package.|r If you experience errors, check the repository on GitHub for updates.')
+    -- print('|cff9966ffKui Nameplates|r: |cffff6666You are using Kui_Nameplates_Example which is not updated by the Curse package.|r If you experience errors, check the repository on GitHub for updates.')
 
     self:RegisterMessage('Create')
     self:RegisterMessage('Show')

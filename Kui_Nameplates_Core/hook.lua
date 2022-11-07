@@ -218,7 +218,7 @@ do
         -- create options category
         opt = CreateFrame('Frame','KuiNameplatesCoreConfig',InterfaceOptionsFramePanelContainer)
         opt:Hide()
-        opt.name = 'Kui |cff9966ffNameplates Core'
+        opt.name = 'Kui Nameplates'
 
         opt:SetScript('OnShow',lod_OnShow)
         opt:SetScript('OnEvent',lod_OnEvent)
