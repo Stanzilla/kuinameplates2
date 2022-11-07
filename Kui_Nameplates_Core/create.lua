@@ -69,7 +69,7 @@ do
 
         if val == 0 or val == max then
             bar.spark:Hide()
-        elseif val < show_val then
+        elseif val <= show_val then
             bar.spark:SetAlpha(1)
             bar.spark:Show()
         else
